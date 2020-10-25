@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  /* grid-template-rows: 50px 50px; */
+  grid-template-areas:
+    "word-title trans-title description-title ."
+    "word-input translation-input description-input add-button";
+}
+
+.new-word-title {
+  grid-area: word-title;
+}
+
+.new-translation-title {
+  grid-area: trans-title;
+}
+
+.new-description-title {
+  grid-area: description-title;
+}
+
+.new-word-title,
+.new-translation-title,
+.new-description-title,
+.word-out,
+.description-out,
+.trans-out {
+  display: flex;
+  align-items: center;
+}
+
+#word-input {
+  grid-area: word-input;
+}
+
+#translation-input {
+  grid-area: translation-input;
+}
+
+#description-input {
+  grid-area: description-input;
+}
+
+.input-title {
+  padding: 5px;
+}
+
+input {
+  margin: 5px;
+  height: 30px;
+}
+
+.add-word-button {
+  grid-area: add-button;
+  height: 30px;
+  margin: 5px;
+}
+
+.words-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "word-out trans-out description-out hide-button";
+}
+
+.word-out {
+  grid-area: word-out;
+}
+
+.trans-out {
+  grid-area: trans-out;
+}
+
+.description-out {
+  grid-area: description-out;
+}
+
+.hide-button {
+  grid-area: hide-button;
+  height: 30px;
+  margin: 5px;
+}
