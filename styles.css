@@ -6,15 +6,18 @@
 
 body {
   font-family: Helvetica, sans-serif;
+  background-color: #ccefff;
 }
 
 .inputs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 0.5fr;
-  /* grid-template-rows: 50px 50px; */
   grid-template-areas:
     "word-title trans-title description-title ."
     "word-input translation-input description-input add-button";
+  align-items: center;
+  padding: 0 0 10px 0;
+  background-color: #66cfff;
 }
 
 .new-word-title {
@@ -31,12 +34,19 @@ body {
 
 .new-word-title,
 .new-translation-title,
+.new-description-title {
+  font-weight: bold;
+}
+
+.new-word-title,
+.new-translation-title,
 .new-description-title,
 .word-out,
 .description-out,
 .trans-out {
   display: flex;
   align-items: center;
+  margin: 5px 5px 0px 5px;
 }
 
 #word-input {
@@ -51,19 +61,29 @@ body {
   grid-area: description-input;
 }
 
-.input-title {
-  padding: 5px;
-}
-
 input {
-  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 3px black;
+  margin: 0 5px;
   height: 30px;
 }
 
 .add-word-button {
   grid-area: add-button;
+}
+
+.add-word-button,
+.hide-button {
   height: 30px;
   margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #009de6;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .words-list {
@@ -86,6 +106,4 @@ input {
 
 .hide-button {
   grid-area: hide-button;
-  height: 30px;
-  margin: 5px;
 }
