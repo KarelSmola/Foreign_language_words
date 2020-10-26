@@ -13,6 +13,7 @@ addBtn.addEventListener("click", () => {
     const newTransOut = document.createElement("p")
     const newDescriptionOut = document.createElement("p")
     const hideButton = document.createElement("button")
+    const deleteButton = document.createElement("button")
     
     // Add classes
     wordsList.classList.add("words-list")
@@ -21,6 +22,8 @@ addBtn.addEventListener("click", () => {
     newDescriptionOut.classList.add("description-out")
     hideButton.classList.add("hide-button")
     hideButton.innerText = "Hide"
+    deleteButton.classList.add("delete-button")
+    deleteButton.innerText = "Delete"
 
     // Do something
     if (newWordInput.value === "" || translationInput.value === "") {
@@ -29,7 +32,7 @@ addBtn.addEventListener("click", () => {
     newWordOut.append(newWordInput.value)
     newTransOut.append(translationInput.value)
     newDescriptionOut.append(wordDescriptionInput.value)
-    wordsList.append(newWordOut, newTransOut, newDescriptionOut, hideButton)
+    wordsList.append(newWordOut, newTransOut, newDescriptionOut, hideButton, deleteButton)
     document.body.appendChild(wordsList)
     newWordInput.value = ""
     translationInput.value = ""
@@ -43,8 +46,6 @@ addBtn.addEventListener("click", () => {
         } else {
             newTransOut.style.display = "none"
         }
-        
     })
-    
 })
 
