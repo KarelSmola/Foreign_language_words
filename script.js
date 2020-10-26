@@ -47,5 +47,9 @@ addBtn.addEventListener("click", () => {
             newTransOut.style.visibility = "hidden"
         }
     })
+
+    deleteButton.addEventListener("click", () => {
+        wordsList.remove()
+    })
 })
 
