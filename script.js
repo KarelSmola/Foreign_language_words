@@ -41,11 +41,15 @@ addBtn.addEventListener("click", () => {
     }
 
     hideButton.addEventListener("click", () => {
-        if (newTransOut.style.display === "none") {
-            newTransOut.style.display = "flex"
+        if (newTransOut.style.visibility === "hidden") {
+            newTransOut.style.visibility = "visible"
         } else {
-            newTransOut.style.display = "none"
+            newTransOut.style.visibility = "hidden"
         }
+    })
+
+    deleteButton.addEventListener("click", () => {
+        wordsList.remove()
     })
 })
 
