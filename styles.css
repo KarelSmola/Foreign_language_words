@@ -100,7 +100,7 @@ input {
   padding: 3px;
 }
 
-.words-list {
+.new-word-line {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 0.25fr 0.25fr;
   grid-template-areas: "word-out trans-out description-out hide-button delete-button";
