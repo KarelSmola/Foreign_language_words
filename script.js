@@ -10,6 +10,10 @@ class NewLine {
         let newWordInput = document.getElementById("word-input")
         let newTranslationInput = document.getElementById("translation-input")
         let newDescriptionInput = document.getElementById("description-input")
+
+        if (newWordInput.value === "" || newTranslationInput.value === "") {
+            alert("You have to fill new word and translation")
+        } else {
         const newWordLine = document.createElement("div")
         const wordOutput = document.createElement("p")
         const translationOutput = document.createElement("p")
@@ -17,7 +21,7 @@ class NewLine {
         const hideBtn = document.createElement("button")
         const deleteBtn = document.createElement("button")
 
-        // Add css class
+        // Add css to the class
         newWordLine.classList.add("new-word-line")
         wordOutput.classList.add("word-out")
         translationOutput.classList.add("trans-out")
@@ -38,7 +42,7 @@ class NewLine {
         newDescriptionInput.value = ""
         newWordInput.focus()
 
-        // Add Listener
+        // Add Listeners
         hideBtn.addEventListener("click", () => {
             if (translationOutput.style.visibility === "hidden") {
                 translationOutput.style.visibility = "visible"
@@ -51,21 +55,12 @@ class NewLine {
             newWordLine.remove()
         })
     }
-
-    hideTranslation(){
-        
-        console.log("Hidden")
-    }
-
-    deleteWord(){
-        console.log("Delete")
-
-    }
-
+}
 }
 
 // Selectors
 const addBtn = document.querySelector(".add-word-button")
+
 
 const newWord = new NewLine()
 
