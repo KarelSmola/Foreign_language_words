@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     "word-title trans-title description-title ."
     "word-input translation-input description-input add-button";
   align-items: center;
-  padding: 0 0 10px 0;
+  padding: 0.5rem;
   background-color: #66cfff;
 }
 
@@ -36,6 +37,7 @@ body {
 .new-translation-title,
 .new-description-title {
   font-weight: bold;
+  padding: 0 0.3rem;
 }
 
 .new-word-title,
@@ -46,14 +48,13 @@ body {
 .trans-out {
   display: flex;
   align-items: center;
-  margin: 5;
   visibility: visible;
 }
 
 .word-out,
 .description-out,
 .trans-out {
-  padding: 5px 10px;
+  padding: 0.8rem;
 }
 
 #word-input {
@@ -95,9 +96,19 @@ input {
   font-size: 1rem;
 }
 
+.fa-plus-square {
+  pointer-events: none;
+}
+
 .delete-button {
   background-color: red;
   padding: 3px;
+}
+
+.disappear {
+  transition: all 1s ease;
+  transform: translateX(3rem) rotate(1deg);
+  opacity: 0;
 }
 
 .new-word-line {
